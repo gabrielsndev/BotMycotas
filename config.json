@@ -1,0 +1,8 @@
+{
+    "cpf" : "",
+    "consorcio_type": "imovel",
+    "step" : 20000,
+    "step_comentario": "Precisa ser multiplos de 5000",
+    "timer" : 30,
+    "ver_chrome": true
+}
