@@ -14,6 +14,7 @@ import json
 import datetime
 import sys
 import os
+import re
 from colorama import Fore, Style
 
 data_atual = datetime.datetime.now().strftime('%Y-%m-%d')
@@ -34,6 +35,11 @@ class Main:
                 self.timer = dados['timer']
                 self.ver_chrome = dados['ver_chrome']
                 self.consorcio = self.consorcio.upper()
+                self.gmail = dados['gmail_bot']
+                self.senha = dados['senha_bot']
+                self.destinatario = dados['gmail_destinatario']
+                self.porcentagem = dados['porcentagem']
+                self.porcentagem = self.porcentagem / 100
                 self.MaximoPraDireita = 129
                 self.contadoMaximo = 0
             with open('mensagem.txt', 'r') as msg:
@@ -63,14 +69,47 @@ class Main:
             self.driver.set_window_size(960, 1080)
             self.driver.set_window_position(0, 0)
             self.driver.get("https://mycotas.mycon.com.br")
+            sleep(3)
+            self.driver.switch_to.new_window('tab')
+            self.driver.get('https://gmail.com/')
+            sleep(2)
         except Exception as error:
                 logging.error(f'Abrindo tela: {error}')
                 raise Exception('Erro ao abrir tela')
 
     def login(self):        
-        print(Fore.BLUE + '|- Fazendo login' + Style.RESET_ALL)
+        print(Fore.BLUE + '|- Iniciando logins' + Style.RESET_ALL)
         try:
-            logging.info('Fazendo login...')
+            logging.info('Fazendo login no gmail...')
+            self.driver.switch_to.window(self.driver.window_handles[1])
+            self.driver.find_element(By.CSS_SELECTOR, '.button.button--medium.header__aside__button.button--desktop.button--tablet.button--mobile').click()
+            sleep(4)
+            #
+            self.driver.find_element(By.CSS_SELECTOR, '#identifierId').click()
+            self.driver.find_element(By.CSS_SELECTOR, '#identifierId').send_keys(self.gmail)
+            sleep(3)
+            self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.LQeN7.BqKGqe.Jskylb.TrZEUc.lw1w4b').click()
+            sleep(3)
+            self.driver.find_element(By.CSS_SELECTOR, '.whsOnd.zHQkBf').click()
+            sleep(1)
+            self.driver.find_element(By.CSS_SELECTOR, '.whsOnd.zHQkBf').send_keys(self.senha)
+            sleep(3)
+            self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.LQeN7.BqKGqe.Jskylb.TrZEUc.lw1w4b').click()
+            sleep(3)
+            try:
+                self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-vQzf8d').click()
+                sleep(2)
+                self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-vQzf8d').click()
+            except: pass    
+            self.driver.switch_to.window(self.driver.window_handles[0])
+        except Exception as e:
+            logging.error(f'Erro ao fazer login no Gmail: {error}')
+            logging.error('Traceback: %s', traceback.format_exc())
+            raise Exception('Erro ao fazer login')
+
+        try:
+            logging.info('Fazendo login no Mycotas...')
+            self.driver.switch_to.window(self.driver.window_handles[0])
             try: self.driver.find_element(By.CSS_SELECTOR, '.accept-policy').click()
             except: pass
             self.driver.execute_script('validateLead()')
@@ -82,13 +121,14 @@ class Main:
                 sleep(0.2)
             self.driver.execute_script('login()') 
         except Exception as error:
-            logging.error(f'Fazendo login: {error}')
+            logging.error(f'Erro ao fazer login no mycotas: {error}')
+            logging.error('Traceback: %s', traceback.format_exc())
             raise Exception('Erro ao fazer login')
 
     def escolher_consorcio(self):
         print(Fore.BLUE + '|- Iniciando Tela' + Style.RESET_ALL)
         try:
-            logging.info('Escolhendo consorcio...')
+            logging.info('Escolhendo o tipo de consorcio...')
             sleep(4)
             itens = self.driver.find_elements(By.CSS_SELECTOR, '.item')
             if self.consorcio == 'IMÓVEL' or self.consorcio == 'IMOVEL':
@@ -100,7 +140,7 @@ class Main:
             elif self.consorcio == 'SERVIÇOS' or self.consorcio == 'SERVICOS':
                 itens[3].click()
         except Exception as error:
-            logging.error(f'Escolhendo consorcio: {error}')
+            logging.error(f'Erro ao escolher consorcio: {error}')
             raise Exception('Erro ao escolher consorcio')
 
     def config_input_baixo(self):
@@ -135,12 +175,12 @@ class Main:
                     self.buscar_oferta()
             self.buscar_oferta()
         except Exception as error:
-            logging.error(f'Configurando o input: {error}')
+            logging.error(f'Erro ao aumentar o input: {error}')
             logging.error('Traceback: %s', traceback.format_exc())
             raise Exception('Erro ao configurar o input para cima')
 
     def buscar_oferta(self):
-        print(Fore.BLUE + '|- Escolhendo consórcios' + Style.RESET_ALL)
+        print(Fore.BLUE + '|- Buscando ofertas ' + Style.RESET_ALL)
         try:
             valor = self.driver.find_element(By.CSS_SELECTOR, '.irs-single').text
             valor = valor.replace('R$', '').replace('.', '').strip()
@@ -158,17 +198,28 @@ class Main:
             if len(linhas) :            
                 for linha in linhas:
                     sleep(2)
+                    link = linha.find_element(By.CSS_SELECTOR, "a[onclick^='alterarProposta(']")
+                    onclick = link.get_attribute("onclick")
+                    identificador = re.search(r'\(([^)]+)\)', onclick).group(1)
+                    print(identificador)
                     colunas = linha.find_elements(By.TAG_NAME, 'td')
                     credito = colunas[0].text
                     credito = credito.replace('.', '').replace(',', '.')
                     credito = float(credito)
-                    porcentagem = credito * 0.30
+                    porcentagem = credito * self.porcentagem
                     entrada = colunas[1]
                     entrada = entrada.text
+                    #as
                     entrada = entrada.replace('.', '').replace(',', '.')
                     entrada = float(entrada)
                     if entrada <= porcentagem:
                         try:
+                            try:
+                                logging.info('Lendo identificadores')
+                                with open("identificadores.txt", "r") as file:
+                                    identificadores_existentes = [line.strip().strip(",") for line in file]
+                            except FileNotFoundError:
+                                identificadores_existentes = []
                             logging.info(f'Oportunidade encontrada na faixa de {valor}...')
                             self.driver.execute_script("arguments[0].scrollIntoView();", linha)                            
                             print(Fore.YELLOW + '|- Oportunidade encontrada' + Style.RESET_ALL)
@@ -182,11 +233,28 @@ class Main:
                             self.driver.find_element(By.CSS_SELECTOR, '#Message').clear()
                             sleep(2)
                             self.driver.find_element(By.CSS_SELECTOR, '#Message').send_keys(self.mensagem)
+                            sleep(1)
                             print(Fore.GREEN + '|- Escolhendo consórcios' + Style.RESET_ALL)
                             self.driver.execute_script('sendContact()') 
                             sleep(2)
-                            self.driver.find_element(By.CSS_SELECTOR, 'button#btCloseModal').click()
                             logging.info('Mensagem enviada com sucesso...')
+                            try: self.driver.find_element(By.CSS_SELECTOR, 'button#btCloseModal').click()
+                            except: pass
+                            sleep(2)
+                            try:
+                                #verificando se já mandou mensagem
+                                if identificador not in identificadores_existentes:
+                                    with open("identificadores.txt", "a") as file:
+                                        file.write(f"{identificador},\n")
+                                        identificadores_existentes.append(identificador)
+                                    logging.info('Enviando Email...')
+                                    self.driver.switch_to.window(self.driver.window_handles[1])
+                                    self.mensagem_gmail()
+                                    print(Fore.GREEN + '|- Email enviado com sucesso' + Style.RESET_ALL)
+                                    self.driver.switch_to.window(self.driver.window_handles[0])
+                            except Exception as error:
+                                logging.error(f'Erro ao enviar email: {error}')
+                                logging.error(traceback.format_exc())
                         except: pass
                 #try:
                 #    self.driver.find_element(By.CSS_SELECTOR, '#responsive-data-table_next').click()
@@ -205,16 +273,43 @@ class Main:
             raise Exception('Erro no processo de buscar oferta')
            
     def esperar(self):
-        print('Esperando...')
+        print('Entrando em modo de espera...')
         try:
-            logging.info('Esperando...')
+            logging.info('Entrando em modo de espera...')
             tempo = self.timer * 60
             self.driver.quit()
             sleep(tempo)
             self.main()
         except Exception as error:
             logging.error(f'Esperando: {error}')
+            logging.error('Traceback: %s', traceback.format_exc())
             raise Exception('Erro ao esperar')
+        
+    def mensagem_gmail(self):
+        try:
+            self.driver.switch_to.window(self.driver.window_handles[1])
+            self.driver.find_element(By.CSS_SELECTOR, '.T-I.T-I-KE.L3').click()
+            sleep(3)
+            self.driver.find_element(By.CSS_SELECTOR, '.agP.aFw').click()
+            self.driver.find_element(By.CSS_SELECTOR, '.agP.aFw').send_keys(self.destinatario)
+            sleep(1)
+            self.driver.find_element(By.CSS_SELECTOR, '.Am.aiL.Al.editable.LW-avf.tS-tW').click()
+            sleep(1)
+            self.driver.find_element(By.CSS_SELECTOR, '.Am.aiL.Al.editable.LW-avf.tS-tW').send_keys('Proposta encontrada')
+            self.driver.find_element(By.CSS_SELECTOR, '.aoT').click()
+            sleep(1)
+            self.driver.find_element(By.CSS_SELECTOR, '.aoT').send_keys('Enviei uma mensage para uma cota')
+            sleep(1)
+            self.driver.find_element(By.CSS_SELECTOR,'.T-I.J-J5-Ji.aoO.v7.T-I-atl.L3').click()
+            sleep(1)
+            self.driver.switch_to.window(self.driver.window_handles[0])
+
+        except Exception as erro:
+            logging.error(f'Erro ao enviar mensagem: {erro}')
+            logging.error('Traceback: %s', traceback.format_exc())
+            raise Exception('Erro ao enviar mensagem')
+
+
 
     def main(self):
         try:
@@ -230,3 +325,6 @@ class Main:
 if __name__ == '__main__':
     main = Main()
     main.main()
+
+    #botzadaaa@gmail.com
+    # botmycons@gmail.com

@@ -1,0 +1,207 @@
+2024-11-10 11:52:23,920 - INFO - Carregando dados...
+2024-11-10 11:52:23,926 - INFO - |- Abrindo tela
+2024-11-10 11:52:23,928 - INFO - ====== WebDriver manager ======
+2024-11-10 11:52:24,352 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:52:24,454 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:52:24,536 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:52:24,908 - INFO - WebDriver version 130.0.6723.116 selected
+2024-11-10 11:52:24,913 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/linux64/chromedriver-linux64.zip
+2024-11-10 11:52:24,913 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.116/linux64/chromedriver-linux64.zip
+2024-11-10 11:52:25,136 - INFO - Driver downloading response is 200
+2024-11-10 11:52:26,787 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:52:27,236 - INFO - Driver has been saved in cache [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116]
+2024-11-10 11:52:29,350 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 11:53:07,070 - INFO - Carregando dados...
+2024-11-10 11:53:07,074 - INFO - |- Abrindo tela
+2024-11-10 11:53:07,077 - INFO - ====== WebDriver manager ======
+2024-11-10 11:53:07,228 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:53:07,313 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:53:07,379 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 11:53:09,518 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 11:55:55,350 - INFO - Carregando dados...
+2024-11-10 11:55:55,353 - INFO - |- Abrindo tela
+2024-11-10 11:55:55,355 - INFO - ====== WebDriver manager ======
+2024-11-10 11:55:55,497 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:55:55,568 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 11:55:55,619 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 11:55:57,727 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:02:57,713 - INFO - Carregando dados...
+2024-11-10 12:02:57,716 - INFO - |- Abrindo tela
+2024-11-10 12:02:57,717 - INFO - ====== WebDriver manager ======
+2024-11-10 12:02:57,864 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:02:58,130 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:02:58,302 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:03:00,670 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:03:40,036 - INFO - Carregando dados...
+2024-11-10 12:03:40,039 - INFO - |- Abrindo tela
+2024-11-10 12:03:40,040 - INFO - ====== WebDriver manager ======
+2024-11-10 12:03:40,178 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:03:40,242 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:03:40,298 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:03:42,307 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:04:10,773 - INFO - Carregando dados...
+2024-11-10 12:04:10,776 - INFO - |- Abrindo tela
+2024-11-10 12:04:10,778 - INFO - ====== WebDriver manager ======
+2024-11-10 12:04:10,922 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:04:10,989 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:04:11,044 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:04:13,050 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:06:09,601 - INFO - Carregando dados...
+2024-11-10 12:06:09,602 - INFO - |- Abrindo tela
+2024-11-10 12:06:09,602 - INFO - ====== WebDriver manager ======
+2024-11-10 12:06:09,742 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:06:09,799 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:06:09,852 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:06:11,810 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:08:27,280 - INFO - Carregando dados...
+2024-11-10 12:08:27,281 - INFO - |- Abrindo tela
+2024-11-10 12:08:27,281 - INFO - ====== WebDriver manager ======
+2024-11-10 12:08:27,418 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:08:27,470 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:08:27,519 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:08:29,508 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:09:20,640 - INFO - Carregando dados...
+2024-11-10 12:09:20,641 - INFO - |- Abrindo tela
+2024-11-10 12:09:20,642 - INFO - ====== WebDriver manager ======
+2024-11-10 12:09:20,784 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:09:20,833 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:09:20,887 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:09:22,808 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:10:57,834 - INFO - Carregando dados...
+2024-11-10 12:10:57,835 - INFO - |- Abrindo tela
+2024-11-10 12:10:57,835 - INFO - ====== WebDriver manager ======
+2024-11-10 12:10:57,973 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:10:58,032 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:10:58,093 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:11:00,093 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:11:56,436 - INFO - Carregando dados...
+2024-11-10 12:11:56,437 - INFO - |- Abrindo tela
+2024-11-10 12:11:56,438 - INFO - ====== WebDriver manager ======
+2024-11-10 12:11:56,576 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:11:56,680 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:11:56,773 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:11:58,769 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:13:02,041 - INFO - Carregando dados...
+2024-11-10 12:13:02,042 - INFO - |- Abrindo tela
+2024-11-10 12:13:02,043 - INFO - ====== WebDriver manager ======
+2024-11-10 12:13:02,184 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:13:02,463 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:13:02,516 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:13:04,580 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:15:31,264 - INFO - Carregando dados...
+2024-11-10 12:15:31,264 - INFO - |- Abrindo tela
+2024-11-10 12:15:31,265 - INFO - ====== WebDriver manager ======
+2024-11-10 12:15:31,402 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:15:31,462 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:15:31,522 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:15:33,417 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:19:15,765 - INFO - Carregando dados...
+2024-11-10 12:19:15,769 - INFO - |- Abrindo tela
+2024-11-10 12:19:15,771 - INFO - ====== WebDriver manager ======
+2024-11-10 12:19:15,914 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:19:15,985 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:19:16,034 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:19:18,176 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 12:21:00,584 - INFO - Carregando dados...
+2024-11-10 12:21:00,585 - INFO - |- Abrindo tela
+2024-11-10 12:21:00,585 - INFO - ====== WebDriver manager ======
+2024-11-10 12:21:00,714 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:21:00,762 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 12:21:00,820 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 12:21:02,960 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 13:53:47,936 - INFO - Carregando dados...
+2024-11-10 13:53:47,939 - INFO - |- Abrindo tela
+2024-11-10 13:53:47,941 - INFO - ====== WebDriver manager ======
+2024-11-10 13:53:48,085 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 13:53:48,161 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 13:53:48,235 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 13:53:50,288 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 14:09:02,487 - INFO - Carregando dados...
+2024-11-10 14:09:02,490 - INFO - |- Abrindo tela
+2024-11-10 14:09:02,492 - INFO - ====== WebDriver manager ======
+2024-11-10 14:09:02,632 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:09:02,701 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:09:02,768 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 14:09:04,841 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 14:09:37,599 - INFO - Carregando dados...
+2024-11-10 14:09:37,607 - INFO - |- Abrindo tela
+2024-11-10 14:09:37,609 - INFO - ====== WebDriver manager ======
+2024-11-10 14:09:37,806 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:09:38,115 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:09:38,228 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 14:09:40,426 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 14:10:29,784 - INFO - Carregando dados...
+2024-11-10 14:10:29,787 - INFO - |- Abrindo tela
+2024-11-10 14:10:29,789 - INFO - ====== WebDriver manager ======
+2024-11-10 14:10:29,926 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:10:30,201 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:10:30,495 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 14:10:32,709 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 14:11:04,059 - INFO - Fazendo login no gmail...
+2024-11-10 14:11:27,242 - INFO - Fazendo login...
+2024-11-10 14:12:00,708 - INFO - Carregando dados...
+2024-11-10 14:12:00,712 - INFO - |- Abrindo tela
+2024-11-10 14:12:00,713 - INFO - ====== WebDriver manager ======
+2024-11-10 14:12:00,855 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:12:00,931 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:12:01,000 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 14:12:02,975 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 14:12:17,213 - INFO - Fazendo login no gmail...
+2024-11-10 14:13:38,392 - INFO - Fazendo login...
+2024-11-10 14:14:30,264 - INFO - Carregando dados...
+2024-11-10 14:14:30,269 - INFO - |- Abrindo tela
+2024-11-10 14:14:30,271 - INFO - ====== WebDriver manager ======
+2024-11-10 14:14:30,412 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:14:30,495 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 14:14:30,565 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 14:14:32,587 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 14:14:47,518 - INFO - Fazendo login no gmail...
+2024-11-10 14:16:45,703 - INFO - Fazendo login...
+2024-11-10 16:07:15,550 - INFO - Carregando dados...
+2024-11-10 16:08:10,012 - INFO - Carregando dados...
+2024-11-10 16:12:21,155 - INFO - Carregando dados...
+2024-11-10 16:13:04,920 - INFO - Carregando dados...
+2024-11-10 16:13:40,962 - INFO - Carregando dados...
+2024-11-10 16:13:40,963 - INFO - |- Abrindo tela
+2024-11-10 16:13:40,964 - INFO - ====== WebDriver manager ======
+2024-11-10 16:13:41,104 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 16:13:41,198 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 16:13:41,265 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 16:13:43,262 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 16:13:59,716 - INFO - Fazendo login no gmail...
+2024-11-10 16:14:24,131 - INFO - Fazendo login...
+2024-11-10 16:14:30,791 - INFO - Escolhendo consorcio...
+2024-11-10 16:14:34,926 - INFO - Configurando o input
+2024-11-10 16:14:46,003 - INFO - Carregando dados...
+2024-11-10 16:14:46,003 - INFO - |- Abrindo tela
+2024-11-10 16:14:46,004 - INFO - ====== WebDriver manager ======
+2024-11-10 16:14:46,139 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 16:14:46,192 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 16:14:46,243 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 16:14:48,159 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 16:15:03,015 - INFO - Fazendo login no gmail...
+2024-11-10 16:15:25,684 - INFO - Fazendo login...
+2024-11-10 16:15:32,203 - INFO - Escolhendo consorcio...
+2024-11-10 16:15:36,317 - INFO - Configurando o input
+2024-11-10 16:15:41,413 - INFO - Buscando ofertas na faixa de 55000.0...
+2024-11-10 16:15:58,978 - INFO - Oportunidade encontrada na faixa de 55000.0...
+2024-11-10 16:16:13,169 - INFO - Mensagem enviada com sucesso...
+2024-11-10 16:16:13,170 - INFO - Enviando Email...
+2024-11-10 16:16:22,897 - INFO - Oportunidade encontrada na faixa de 55000.0...
+2024-11-10 16:16:37,061 - INFO - Mensagem enviada com sucesso...
+2024-11-10 16:16:37,061 - INFO - Enviando Email...
+2024-11-10 16:19:15,101 - INFO - Carregando dados...
+2024-11-10 16:19:15,102 - INFO - |- Abrindo tela
+2024-11-10 16:19:15,103 - INFO - ====== WebDriver manager ======
+2024-11-10 16:19:15,235 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 16:19:15,290 - INFO - Get LATEST chromedriver version for google-chrome
+2024-11-10 16:19:15,342 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/130.0.6723.116/chromedriver-linux64/chromedriver] found in cache
+2024-11-10 16:19:17,274 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-11-10 16:19:32,110 - INFO - Fazendo login no gmail...
+2024-11-10 16:19:54,440 - INFO - Fazendo login...
+2024-11-10 16:20:01,015 - INFO - Escolhendo consorcio...
+2024-11-10 16:20:05,133 - INFO - Configurando o input
+2024-11-10 16:20:10,313 - INFO - Buscando ofertas na faixa de 55000.0...
+2024-11-10 16:20:31,872 - INFO - Configurando o input
+2024-11-10 16:21:36,382 - INFO - Buscando ofertas na faixa de 700000.0...
+2024-11-10 16:21:53,742 - INFO - Esperando...
