@@ -7,15 +7,17 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
+import email.message
+from colorama import Fore, Style
 from time import sleep
 import logging
+import smtplib
 import traceback
 import json
 import datetime
 import sys
 import os
 import re
-from colorama import Fore, Style
 
 data_atual = datetime.datetime.now().strftime('%Y-%m-%d')
 os.makedirs('logs', exist_ok=True)
@@ -70,9 +72,6 @@ class Main:
             self.driver.set_window_position(0, 0)
             self.driver.get("https://mycotas.mycon.com.br")
             sleep(3)
-            self.driver.switch_to.new_window('tab')
-            self.driver.get('https://gmail.com/')
-            sleep(2)
         except Exception as error:
                 logging.error(f'Abrindo tela: {error}')
                 raise Exception('Erro ao abrir tela')
@@ -80,36 +79,7 @@ class Main:
     def login(self):        
         print(Fore.BLUE + '|- Iniciando logins' + Style.RESET_ALL)
         try:
-            logging.info('Fazendo login no gmail...')
-            self.driver.switch_to.window(self.driver.window_handles[1])
-            self.driver.find_element(By.CSS_SELECTOR, '.button.button--medium.header__aside__button.button--desktop.button--tablet.button--mobile').click()
-            sleep(4)
-            #
-            self.driver.find_element(By.CSS_SELECTOR, '#identifierId').click()
-            self.driver.find_element(By.CSS_SELECTOR, '#identifierId').send_keys(self.gmail)
-            sleep(3)
-            self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.LQeN7.BqKGqe.Jskylb.TrZEUc.lw1w4b').click()
-            sleep(3)
-            self.driver.find_element(By.CSS_SELECTOR, '.whsOnd.zHQkBf').click()
-            sleep(1)
-            self.driver.find_element(By.CSS_SELECTOR, '.whsOnd.zHQkBf').send_keys(self.senha)
-            sleep(3)
-            self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.LQeN7.BqKGqe.Jskylb.TrZEUc.lw1w4b').click()
-            sleep(3)
-            try:
-                self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-vQzf8d').click()
-                sleep(2)
-                self.driver.find_element(By.CSS_SELECTOR, '.VfPpkd-vQzf8d').click()
-            except: pass    
-            self.driver.switch_to.window(self.driver.window_handles[0])
-        except Exception as e:
-            logging.error(f'Erro ao fazer login no Gmail: {error}')
-            logging.error('Traceback: %s', traceback.format_exc())
-            raise Exception('Erro ao fazer login')
-
-        try:
             logging.info('Fazendo login no Mycotas...')
-            self.driver.switch_to.window(self.driver.window_handles[0])
             try: self.driver.find_element(By.CSS_SELECTOR, '.accept-policy').click()
             except: pass
             self.driver.execute_script('validateLead()')
@@ -201,7 +171,6 @@ class Main:
                     link = linha.find_element(By.CSS_SELECTOR, "a[onclick^='alterarProposta(']")
                     onclick = link.get_attribute("onclick")
                     identificador = re.search(r'\(([^)]+)\)', onclick).group(1)
-                    print(identificador)
                     colunas = linha.find_elements(By.TAG_NAME, 'td')
                     credito = colunas[0].text
                     credito = credito.replace('.', '').replace(',', '.')
@@ -234,7 +203,6 @@ class Main:
                             sleep(2)
                             self.driver.find_element(By.CSS_SELECTOR, '#Message').send_keys(self.mensagem)
                             sleep(1)
-                            print(Fore.GREEN + '|- Escolhendo consórcios' + Style.RESET_ALL)
                             self.driver.execute_script('sendContact()') 
                             sleep(2)
                             logging.info('Mensagem enviada com sucesso...')
@@ -248,10 +216,11 @@ class Main:
                                         file.write(f"{identificador},\n")
                                         identificadores_existentes.append(identificador)
                                     logging.info('Enviando Email...')
-                                    self.driver.switch_to.window(self.driver.window_handles[1])
-                                    self.mensagem_gmail()
+                                    #email
+                                    sleep(1)
+                                    self.enviar_email()
+                                    logging.info('Email enviado...')
                                     print(Fore.GREEN + '|- Email enviado com sucesso' + Style.RESET_ALL)
-                                    self.driver.switch_to.window(self.driver.window_handles[0])
                             except Exception as error:
                                 logging.error(f'Erro ao enviar email: {error}')
                                 logging.error(traceback.format_exc())
@@ -280,35 +249,30 @@ class Main:
             self.driver.quit()
             sleep(tempo)
             self.main()
-        except Exception as error:
-            logging.error(f'Esperando: {error}')
-            logging.error('Traceback: %s', traceback.format_exc())
-            raise Exception('Erro ao esperar')
-        
-    def mensagem_gmail(self):
-        try:
-            self.driver.switch_to.window(self.driver.window_handles[1])
-            self.driver.find_element(By.CSS_SELECTOR, '.T-I.T-I-KE.L3').click()
-            sleep(3)
-            self.driver.find_element(By.CSS_SELECTOR, '.agP.aFw').click()
-            self.driver.find_element(By.CSS_SELECTOR, '.agP.aFw').send_keys(self.destinatario)
-            sleep(1)
-            self.driver.find_element(By.CSS_SELECTOR, '.Am.aiL.Al.editable.LW-avf.tS-tW').click()
-            sleep(1)
-            self.driver.find_element(By.CSS_SELECTOR, '.Am.aiL.Al.editable.LW-avf.tS-tW').send_keys('Proposta encontrada')
-            self.driver.find_element(By.CSS_SELECTOR, '.aoT').click()
-            sleep(1)
-            self.driver.find_element(By.CSS_SELECTOR, '.aoT').send_keys('Enviei uma mensage para uma cota')
-            sleep(1)
-            self.driver.find_element(By.CSS_SELECTOR,'.T-I.J-J5-Ji.aoO.v7.T-I-atl.L3').click()
-            sleep(1)
-            self.driver.switch_to.window(self.driver.window_handles[0])
-
         except Exception as erro:
             logging.error(f'Erro ao enviar mensagem: {erro}')
             logging.error('Traceback: %s', traceback.format_exc())
             raise Exception('Erro ao enviar mensagem')
 
+    def enviar_email(self):
+        corpo_email = '''
+        <p>Uma nova cota no Mycons foi encontrada!</p>
+        <p>Essa mensagem é enviada automaticamente, não há necessidade de responder.</p>
+        '''
+
+        msg = email.message.Message()
+        msg['Subject'] = 'Nova cota no Mycons'
+        msg['From'] = self.gmail
+        msg['To'] = self.destinatario
+        password = self.senha
+        msg.add_header('Content-Type', 'text/html')
+        msg.set_payload(corpo_email)
+
+        s = smtplib.SMTP('smtp.gmail.com: 587')
+        s.starttls()
+        s.login(msg['From'], password)
+        s.sendmail(msg['From'], msg['To'], msg.as_string().encode('utf-8'))
+        logging.info('Email enviado com sucesso')
 
 
     def main(self):
@@ -327,4 +291,4 @@ if __name__ == '__main__':
     main.main()
 
     #botzadaaa@gmail.com
-    # botmycons@gmail.com
+    #botmycons@gmail.com
