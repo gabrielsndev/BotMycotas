@@ -1,0 +1,90 @@
+2024-12-05 12:08:19,956 - INFO - Carregando dados...
+2024-12-05 12:08:19,957 - INFO - |- Abrindo tela
+2024-12-05 12:08:19,957 - INFO - ====== WebDriver manager ======
+2024-12-05 12:08:20,338 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-05 12:08:20,393 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-05 12:08:20,441 - INFO - There is no [linux64] chromedriver "131.0.6778.87" for browser google-chrome "131.0.6778" in cache
+2024-12-05 12:08:20,441 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-05 12:08:20,595 - INFO - WebDriver version 131.0.6778.87 selected
+2024-12-05 12:08:20,599 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.87/linux64/chromedriver-linux64.zip
+2024-12-05 12:08:20,599 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.87/linux64/chromedriver-linux64.zip
+2024-12-05 12:08:20,838 - INFO - Driver downloading response is 200
+2024-12-05 12:08:22,439 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-05 12:08:22,717 - INFO - Driver has been saved in cache [/home/gabriel/.wdm/drivers/chromedriver/linux64/131.0.6778.87]
+2024-12-05 12:08:25,456 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-12-05 12:08:34,850 - INFO - Fazendo login no Mycotas...
+2024-12-05 12:08:42,433 - INFO - Escolhendo o tipo de consorcio...
+2024-12-05 12:08:46,583 - INFO - Configurando o input
+2024-12-05 12:08:51,856 - INFO - Buscando ofertas na faixa de 550000.0...
+2024-12-05 12:08:53,963 - ERROR - Erro no processo de buscar oferta: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.69)
+Stacktrace:
+#0 0x62f8ee7a134a <unknown>
+#1 0x62f8ee2b76e0 <unknown>
+#2 0x62f8ee28d38f <unknown>
+#3 0x62f8ee33289d <unknown>
+#4 0x62f8ee34888c <unknown>
+#5 0x62f8ee32a203 <unknown>
+#6 0x62f8ee2f8cc0 <unknown>
+#7 0x62f8ee2f9c9e <unknown>
+#8 0x62f8ee76ed3b <unknown>
+#9 0x62f8ee772cc2 <unknown>
+#10 0x62f8ee75bb6c <unknown>
+#11 0x62f8ee773837 <unknown>
+#12 0x62f8ee74110f <unknown>
+#13 0x62f8ee7905a8 <unknown>
+#14 0x62f8ee790770 <unknown>
+#15 0x62f8ee7a01c6 <unknown>
+#16 0x75ada909ca94 <unknown>
+#17 0x75ada9129c3c <unknown>
+
+2024-12-05 12:08:53,972 - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/gabriel/Documentos/Code/Códigos python/BotMycotas/main.py", line 163, in buscar_oferta
+    self.driver.execute_script('filter()')
+  File "/home/gabriel/Documentos/Code/Códigos python/BotMycotas/env/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 414, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gabriel/Documentos/Code/Códigos python/BotMycotas/env/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "/home/gabriel/Documentos/Code/Códigos python/BotMycotas/env/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.69)
+Stacktrace:
+#0 0x62f8ee7a134a <unknown>
+#1 0x62f8ee2b76e0 <unknown>
+#2 0x62f8ee28d38f <unknown>
+#3 0x62f8ee33289d <unknown>
+#4 0x62f8ee34888c <unknown>
+#5 0x62f8ee32a203 <unknown>
+#6 0x62f8ee2f8cc0 <unknown>
+#7 0x62f8ee2f9c9e <unknown>
+#8 0x62f8ee76ed3b <unknown>
+#9 0x62f8ee772cc2 <unknown>
+#10 0x62f8ee75bb6c <unknown>
+#11 0x62f8ee773837 <unknown>
+#12 0x62f8ee74110f <unknown>
+#13 0x62f8ee7905a8 <unknown>
+#14 0x62f8ee790770 <unknown>
+#15 0x62f8ee7a01c6 <unknown>
+#16 0x75ada909ca94 <unknown>
+#17 0x75ada9129c3c <unknown>
+
+
+2024-12-05 12:09:11,234 - INFO - Carregando dados...
+2024-12-05 12:09:11,235 - INFO - |- Abrindo tela
+2024-12-05 12:09:11,235 - INFO - ====== WebDriver manager ======
+2024-12-05 12:09:11,474 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-05 12:09:12,239 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-05 12:09:12,309 - INFO - Driver [/home/gabriel/.wdm/drivers/chromedriver/linux64/131.0.6778.87/chromedriver-linux64/chromedriver] found in cache
+2024-12-05 12:09:14,577 - INFO - patching driver executable /home/gabriel/.local/share/undetected_chromedriver/undetected_chromedriver
+2024-12-05 12:09:23,235 - INFO - Fazendo login no Mycotas...
+2024-12-05 12:09:30,328 - INFO - Escolhendo o tipo de consorcio...
+2024-12-05 12:09:34,456 - INFO - Configurando o input
+2024-12-05 12:09:39,657 - INFO - Buscando ofertas na faixa de 55000.0...
+2024-12-05 12:09:59,263 - INFO - Lendo identificadores
+2024-12-05 12:09:59,263 - INFO - Oportunidade encontrada na faixa de 55000.0...
+2024-12-05 12:10:14,574 - INFO - Mensagem enviada com sucesso...
+2024-12-05 12:10:21,108 - INFO - Configurando o input
